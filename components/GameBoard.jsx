@@ -3,8 +3,8 @@ import styled from "styled-components"
 const GameBoard = () => {
   return (
     <BackgroundLines>
-      {[...Array(9)].map((val, index) => {
-        return <GameSquare key={val} />
+      {[...Array(9)].map((_, index) => {
+        return <GameSquare key={`gamesquare-pos-${index}`} />
       })}
     </BackgroundLines>
   )
