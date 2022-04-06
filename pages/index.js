@@ -1,7 +1,12 @@
+import { GameBoard } from "components"
 import styled from "styled-components"
 
 const App = () => {
-  return <Wrapper>Hello World</Wrapper>
+  return (
+    <Wrapper>
+      <GameBoard />
+    </Wrapper>
+  )
 }
 
 export default App
