@@ -1,10 +1,15 @@
 import styled from "styled-components"
+import GameSquare from "./GameSquare"
 
 const GameBoard = () => {
   return (
     <BackgroundLines>
       {[...Array(9)].map((_, index) => {
-        return <GameSquare key={`gamesquare-pos-${index}`} />
+        return (
+          <GameSquareWrapper key={`gamesquare-pos-${index}`}>
+            <GameSquare />
+          </GameSquareWrapper>
+        )
       })}
     </BackgroundLines>
   )
@@ -21,7 +26,10 @@ const BackgroundLines = styled.div`
   gap: 10px;
 `
 
-const GameSquare = styled.div`
+const GameSquareWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: ${emptySquareSize};
   height: 100%;
   background-color: white;
